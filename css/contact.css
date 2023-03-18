@@ -1,0 +1,132 @@
+#main {
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*
+--------------------------------
+            header
+--------------------------------
+ */
+#main > header {
+    text-align: center;
+    margin: 0 0 3em 0;
+}
+
+#main > header h2 {
+    font-size: 2.75em;
+    margin: 0;
+    color: #555;
+}
+
+#main > header p {
+    border-top: solid 2px #999999;
+    color: #777;
+    display: inline-block;
+    font-style: normal;
+    margin: 1em 0 0 0;
+    padding: 1em 0 1.25em 0;
+}
+
+/*
+--------------------------------
+     Formulário de contacto
+--------------------------------
+ */
+#main-form{
+    background-color: #ded0bc;
+    color: #493f35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 650px;
+    margin: 0;
+    border-radius: 50px;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 80%;
+    background-color: #96866d;
+    padding: 15px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+.box{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 80%;
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #493f35 solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: black;
+}
+.form-control input:focus, .form-control input:valid{
+    outline: 0;
+    border-bottom-color: #493f35;
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-height: 5px;
+    transition: 0.3s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span, .form-control input:valid + label span{
+    color: #493f35;
+    transform: translateY(-30px);
+}
+
+/*
+    Retirar as setas do input[type=number]
+ */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Para eliminar */
+.box{
+    border: 1px solid grey;
+    width: 1000px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.paragraf{
+    margin: 5px;
+}
+.paragraf span{
+    text-decoration: underline;
+}

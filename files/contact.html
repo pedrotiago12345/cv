@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedro Gonçalves</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <header id="header">
+        <h1>Pedro Gonçalves</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="../index.html">Apresentação</a></li>
+                <li><a href="../files/contact.html">Contactar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="main">
+        <header>
+            <h2>Contacte-me</h2>
+            <p>
+                No formulário abaixo diga o que deseja.<br><br>
+                Se for uma empresa o nome e o email deverão ser do responsável com quem vou falar,<br> o nome da empresa deverá ser indicado na mensagem
+            </p>
+        </header>
+        <div class="box">
+            <p class="paragraf">Sei que está á espera de um formulário onde você escreve uma mensagem e envia para mim</p>
+            <p class="paragraf">Pois tudo este site ainda está a ser construído e neste momento só existe client-side</p>
+            <p class="paragraf">Lamento o incômodo causado por esta situação</p>
+            <p class="paragraf">Contudo se desejar entrar em contacto comigo pode usar o seguinte email:</p>
+            <p class="paragraf">email: <span>pedrotiagocg2011@hotmail.com</span></p>
+        </div>
+    </section>
+    <footer></footer>
+    <script>
+        const labels = document.querySelectorAll(".form-control label")
+        labels.forEach((label) => {
+            label.innerHTML = label.innerText.split("").map(
+                (letter, idx) => `<span style='transition-delay:${idx*50}ms'>${letter}</span>`
+            ).join("");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="shape">
+    <div id="facebook-icon"></div>
+
+    <style contenteditable="">
+        #facebook-icon {
+            background: #48649F;
+            text-indent: -999em;
+            width: 100px;
+            height: 110px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            border: 15px solid #48649F;
+            border-bottom: 0;
+        }
+        #facebook-icon::before {
+            content: "/20";
+            position: absolute;
+            background: #48649F;
+            width: 40px;
+            height: 90px;
+            bottom: -30px;
+            right: -37px;
+            border: 20px solid #eee;
+            border-radius: 25px;
+        }
+        #facebook-icon::after {
+            content: "/20";
+            position: absolute;
+            width: 55px;
+            top: 50px;
+            height: 20px;
+            background: #eee;
+            right: 5px;
+        }
+
+        style {
+            background: none repeat scroll 0 0 #333;
+            color: white;
+            display: block;
+            font: 12px Monaco;
+            padding: 0 15px;
+            white-space: pre;
+            width:400px;
+            margin-top:40px;
+        }
+    </style>
+
+</div>
+</body>
+</html>

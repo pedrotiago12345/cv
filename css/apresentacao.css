@@ -1,0 +1,190 @@
+#conhece, #vida_academica, #detalhes{
+    position: relative;
+    top: 5em;
+    padding: 5px;
+}
+#id_basic, #extra_formation{
+    position: relative;
+    top: 3.25em;
+    width: 40%;
+}
+#id_basic{
+    float: left;
+    margin: 0 0 0 -8px;
+    padding: 5px;
+}
+#extra_formation{
+    display: grid;
+    place-items: center;
+    padding-right: 20px;
+    float: right;
+    /*border: deeppink 1px solid;*/
+    margin: 0 -8px 0 0;
+}
+
+/*
+--------------------------------------
+    Tabela de informações básicas
+--------------------------------------
+ */
+#tabela_formacao, td, th{
+    padding: 2px 5px;
+    text-align: center;
+}
+#tabela_formacao{
+    width: 100%;
+}
+.table_left{
+    text-align: left;
+}
+.table_right{
+    text-align: right;
+    font-weight: bold;
+}
+
+/*
+------------------------------------------
+    Tabela de eventos e vida academica
+------------------------------------------
+ */
+#tabela_extra, #tabela_extra tr td, #academic_live, #academic_live tr td, #secundario_live, #secundario_live tr td{
+    border: 1px black solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+.title_extra{
+    font-weight: bold;
+}
+#vida_academica{
+    display: grid;
+    place-items: center;
+}
+#tabela_secundario{
+    display: grid;
+    place-items: center;
+}
+/*
+---------------------------------
+         Falar comigo
+---------------------------------
+ */
+#falar{
+    position: relative;
+    top: 5em;
+    height: 200px;
+    background-color: darkred;
+    width: 100%;
+    margin: 10px 10px 10px -8px;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    z-index: 0;
+}
+
+#falar h1{
+    color: white;
+}
+
+#falar span{
+    color: white;
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+}
+
+#falar a{
+    text-decoration: none;
+}
+
+#btn{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 12px 18px;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+}
+
+#btn::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 4px));
+    width: 45px;
+    height: 45px;
+    background: #dc143c;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0,0,.5,2), width .25s cubic-bezier(0,0,.5,2);
+    z-index: -1;
+}
+
+#btn:hover::before{
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0,0,.5,2), width .25s .25s cubic-bezier(0,0,.5,2);
+}
+
+#junta_elementos{
+    display: grid;
+    place-items: center;
+}
+
+/*
+--------------------------------
+     Ferramentas obtidas
+--------------------------------
+ */
+#conhece{
+    display: grid;
+    place-items: center;
+}
+
+/*
+-----------------------------------
+                Detalhes
+-----------------------------------
+*/
+.dados{
+    background-color: #fff;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+#detalhes{
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+button.btn_detalhe{
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+button.btn_detalhe:after{
+    content: "\f150";
+    font-family: "fontawesome";
+    font-size: 18px;
+    float: right;
+}
+button.btn_detalhe.is-open:after{
+    content: "\f150";
+}
+button.btn_detalhe:hover,
+button.btn_detalhe.is-open{
+    background-color: #ddd;
+}
